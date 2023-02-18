@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded' , function()
+        {
+
+            document.querySelector('#sub').disabled = true
+            document.querySelector('#text').onkeyup = () => 
+            {
+                document.querySelector('#sub').disabled=false
+            }
+
+ 
+            document.querySelector('form').onsubmit = function(){
+            
+            const txt = document.querySelector('#text').value
+            const li = document.createElement('li')
+            li.innerHTML=txt
+            document.querySelector('#orderlist').append(li)
+            document.querySelector('#text').value = '';
+
+            document.querySelector('#sub').disabled = true
+            return false
+            }
+            
+
+        })
+        
+    </script>
+</head>
+<body>
+    <h1>Daily TASKS</h1>
+    <ol id="orderlist">
+
+    </ol>
+    <form>
+        <input autofocus id="text" placeholder="name" type="text">
+        <button id="sub">submit</button>
+    </form>
+    
+</body>
+</html>

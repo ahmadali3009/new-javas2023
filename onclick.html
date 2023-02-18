@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #div1{
+        background: green;
+        width: 50px;
+    }
+    #div2{
+        background: blue;
+        width: 50px;
+    }
+    #div3{
+        background: red;
+        width: 50px;
+    }
+    #div1 , #div2 , #div3
+    {
+        display: flex;
+        display: inline-block;
+    }
+</style>
+<script>
+    let count=0;
+    function countt()
+    {
+       
+        count++
+        document.querySelector('#h5').innerHTML=count;
+       
+    }
+let counter =0;
+    function counttt()
+    {
+       
+        counter++
+        document.querySelector('#h3').innerHTML=counter;
+       
+    }
+    let coin = 0;
+    function countttt()
+    {
+       
+        coin++
+        document.querySelector('#h4').innerHTML= coin;
+       
+    }
+    document.addEventListener('DOMContentLoaded' , function(){
+        document.querySelector('#div1').onclick=countt
+    })
+
+   document.addEventListener('DOMContentLoaded' , function(){
+      document.querySelector('#div2').onclick= counttt
+   })
+    document.addEventListener('DOMContentLoaded' , function(){
+        document.querySelector('#div3').onclick=countttt
+    })
+    
+</script>
+<body>
+    <h1>onclick project</h1>
+    <div id="div1">
+        <h2 id="h5">0</h2>
+    </div>
+    <div id="div2">
+        <h2 id="h3">0</h2>
+    </div>
+    <div id="div3">
+        <h2 id="h4">0</h2>
+    </div>
+
+</body>
+</html>
